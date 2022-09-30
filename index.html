@@ -1,0 +1,16 @@
+<script>
+    function anAddBtnclicked(){
+        answer.value = Number(number1.value) + Number(number2.value)
+    }
+
+    function onSubtractBtnclicked(){
+        answer.value = Number(number1.value) - Number(number2.value)
+    }
+    function init (){
+        answer = window.answerField
+        number1 = windown.number1Field
+        number2 = window.number2Field
+    }
+    window.onload = init;
+    //document.addEventListener("load", init);
+</script>
