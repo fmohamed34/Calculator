@@ -1,16 +1,36 @@
 <script>
-    function anAddBtnclicked(){
+    function onAddBtnclicked(){
         answer.value = Number(number1.value) + Number(number2.value)
     }
 
     function onSubtractBtnclicked(){
         answer.value = Number(number1.value) - Number(number2.value)
     }
+
+    function onMultiplyBtnclicked(){
+        answer.value = Number(number1.value) * Number(number2.value)
+    }
+
+    function onDivideBtnclicked(){
+        answer.value = Number(number1.value) / Number(number2.value)
+    }
+
     function init (){
         answer = window.answerField
-        number1 = windown.number1Field
+        number1 = window.number1Field
         number2 = window.number2Field
     }
     window.onload = init;
     //document.addEventListener("load", init);
 </script>
+<body>
+    Number 1: <input id="number1Field"><br><br>
+    Number 2: <input id="number2Field">
+    <p>
+        <button id="add" onclick="onAddBtnclicked()">Add</button>
+        <button id="subtract" onclick="onSubtractBtnclicked()">subtract</button>
+        <button id="multiply" onclick="onMultiplyBtnclicked()">Multiply</button>
+        <button id="divide" onclick="onDivideBtnclicked()">Divide</button>
+    </p>
+Answer <input id="answerField" readonly>
+</body>
